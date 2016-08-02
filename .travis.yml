@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "5.10.1"
+install:
+  - npm install -g firebase-tools
+script:
+  - echo 'Testing Travis CI'
+env:
+  global:
+    - secure: "RnOzsyrJXi9f9vr+dhHU3h8zvG6MowjwR8Jau4+XtBRYkNugQ/ZUDtoyTZq2CdRvEbFGhpxkc2FBeWcLAKYNBsXqOjLwoZp1r1VuRJ/Q7LEO9Fnj6NeZLb69pJRUriKHVaG8xQdyAwJtEDKjBkdwlHreZFXvXFEb+pPaf72iO3Vs/ohyBYgscn9B0KeVovFSZmnhKs93DR68comOmVJ+/GU9QQC/+JjKHHqN2XJQ2GpdSZP9tCNwGR7RwykOqSgmixNjGBWXW3uKhPc5kxYz1bUYvCYutHtNZwbZ3CFYEtFs8zGMRFm6ZgNgJw5adTYPBSo7jw2A/v+DqVvCu42tzWqvgqIBBqHuRnkWnXfbbpqdqWVZ8VCipIkLieqHcFOwp6jdHStmA1RiwEY/uRrv/AHxZaYFiG/9R84jhyxN9E2tk3PfoAjF5ixYsXuG973xv3k1D0Y0G97VmFEMp4a9zY19dLkAsHS6HPQNEc0jfYp5Tou8eZCqBB9eXiK62hDd1/SXCRo/PV8AbaVyhTHO+jgsvZ5AG69oJ6cxbkccQzsHXXG9CkWPVFz4cBQhPzK44j0GfD3EXtcMLPbuFPmQ6dSxG1DvbE/P7XrzBKM36IWtT6x41hplgnb/uhxclkc2anArj/c76cJAJFYL2cm2gJNDd9K0e03p97MV5lvHpNQ="
+after_success:
+  - firebase deploy
